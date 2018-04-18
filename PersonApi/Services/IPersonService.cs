@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using PersonApi.Dto;
+using PersonApi.Request;
 
 namespace PersonApi.Services
 {
@@ -10,6 +9,6 @@ namespace PersonApi.Services
     {
         Task<List<PersonDto>> GetAllPersons();
         PersonDto GetPersonById(int personId);
-        PersonDto AddNewPerson(PersonDto person);
+        Task<PersonDto> AddNewPerson(PersonRequest person);
     }
 }

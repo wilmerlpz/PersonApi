@@ -1,10 +1,9 @@
-﻿namespace PersonApi.Dto
+﻿using PersonApi.Request;
+
+namespace PersonApi.Dto
 {
-    public class PersonDto
+    public class PersonDto : PersonRequest
     {
         public int Id { get; set; }
-        public string Firstname { get; set; }
-        public string LastName { get; set; }
-        public bool Disabled { get; set; }
     }
 }
