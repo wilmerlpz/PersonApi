@@ -20,7 +20,7 @@ namespace PersonApi.Config
             });
 
             For<IPersonService>().Use<PersonService>();
-            For<IPersonRepository>().Use<PersonRepository>();
+            For<IPersonRepository>().Use<PersonRepository>().Singleton();
         }
 
     }

@@ -7,7 +7,7 @@ namespace PersonApi.Repository
 {
     public class PersonRepository : IPersonRepository
     {
-        private readonly List<PersonDto> _personCollection = new List<PersonDto>(){new PersonDto(){Id = 1, Firstname = "Wilmer", LastName = "López", Disabled = false}};
+        private readonly List<PersonDto> _personCollection = new List<PersonDto>();
 
         public bool AddPerson(PersonDto person)
         {
