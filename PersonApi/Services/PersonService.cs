@@ -1,26 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using PersonApi.Dto;
+using PersonApi.Repository;
 
 namespace PersonApi.Services
 {
     public class PersonService : IPersonService
     {
+        private readonly IPersonRepository _personRepository;
+        private static int nextId;
+
+        public PersonService(IPersonRepository personRepository)
+        {
+            _personRepository = personRepository;
+        }
         public PersonDto AddNewPerson(PersonDto person)
         {
-            throw new NotImplementedException();
+            person.Id = Interlocked.Increment(ref nextId);
+            _personRepository.AddPerson(person);
+            return person;
         }
 
-        public List<PersonDto> GetAllPersons()
+        public async Task<List<PersonDto>> GetAllPersons()
         {
-            throw new NotImplementedException();
+            return await Task.FromResult(_personRepository.GetAllPerson());
         }
 
         public PersonDto GetPersonById(int personId)
         {
-            throw new NotImplementedException();
+            return  _personRepository.GetPersonById(personId);
         }
     }
 }

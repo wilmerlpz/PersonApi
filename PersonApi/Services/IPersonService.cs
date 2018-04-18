@@ -8,7 +8,7 @@ namespace PersonApi.Services
 {
     public interface IPersonService
     {
-        List<PersonDto> GetAllPersons();
+        Task<List<PersonDto>> GetAllPersons();
         PersonDto GetPersonById(int personId);
         PersonDto AddNewPerson(PersonDto person);
     }
