@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  personapi:
+    image: personapi
+    build:
+      context: .
+      dockerfile: PersonApi/Dockerfile
