@@ -26,7 +26,7 @@ namespace PersonApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(PersonRequest person)
+        public async Task<IActionResult> Post([FromBody]PersonRequest person)
         {
             var result = await _personService.AddNewPerson(person);
             return Json(result);

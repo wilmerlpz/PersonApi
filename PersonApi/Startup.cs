@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using PersonApi.Config;
 using StructureMap;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace PersonApi
 {
@@ -26,6 +27,12 @@ namespace PersonApi
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            //Add swagger
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1",new Info{ Title = "My Person API", Version = "v1"});
+            });
 
             var container = new Container();
             container.Configure(config =>
@@ -46,6 +53,11 @@ namespace PersonApi
             }
 
             app.UseMvc();
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
         }
     }
 }
