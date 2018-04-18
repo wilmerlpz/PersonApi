@@ -5,5 +5,7 @@
         public string Firstname { get; set; }
         public string LastName { get; set; }
         public bool Disabled { get; set; }
+        public bool ShouldSerializeDisabled() => Disabled;
+
     }
 }
