@@ -4,7 +4,7 @@ using PersonApiClient.Dto;
 
 namespace PersonFrontEnd.Services
 {
-    public class PersonsService
+    public class PersonsService : IPersonsService
     {
         public List<PersonDto> GetAllPerson()
         {

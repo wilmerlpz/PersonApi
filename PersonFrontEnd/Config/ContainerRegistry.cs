@@ -1,12 +1,10 @@
 ﻿using StructureMap;
-using PersonApi.Repository;
-using PersonApi.Services;
+using PersonFrontEnd.Services;
 
-namespace PersonApi.Config
+namespace PersonFrontEnd.Config
 {
     public class ContainerRegistry : Registry
     {
-
         public ContainerRegistry()
         {
             Scan(scan =>
@@ -15,9 +13,7 @@ namespace PersonApi.Config
                 scan.WithDefaultConventions();
             });
 
-            For<IPersonService>().Use<PersonService>();
-            For<IPersonRepository>().Use<PersonRepository>().Singleton();
+            For<IPersonsService>().Use<PersonsService>();
         }
-
     }
 }

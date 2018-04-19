@@ -7,19 +7,24 @@ namespace PersonFrontEnd.Controllers
 {
     public class PersonsController : Controller
     {
+        private IPersonsService PersonsService { get; set; }
+
+        public PersonsController(IPersonsService personsService)
+        {
+            PersonsService = personsService;
+        }
+
         [HttpGet]
         public IActionResult Index()
         {
             ViewData["Message"] = "Person Collection page.";
-            var personService = new PersonsService();
-            return View(new PersonsViewModel(personService.GetAllPerson()));
+            return View(new PersonsViewModel(PersonsService.GetAllPerson()));
         }
         [HttpPost]
         public IActionResult Search([FromForm]string personName)
         {
             ViewData["Message"] = "Person Collection page.";
-            var personService = new PersonsService();
-            var personList = personService.SearchPersonByname(personName);
+            var personList = PersonsService.SearchPersonByname(personName);
             return View("Index",new PersonsViewModel(personList));
         }
 
