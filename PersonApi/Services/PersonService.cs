@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using PersonApi.Dto;
@@ -36,9 +34,20 @@ namespace PersonApi.Services
             return await Task.FromResult(_personRepository.GetAllPerson());
         }
 
-        public PersonDto GetPersonById(int personId)
+        public async Task<PersonDto> GetPersonById(int personId)
         {
-            return _personRepository.GetPersonById(personId);
+            return await Task.FromResult(_personRepository.GetPersonById(personId));
+        }
+
+
+        public async Task<bool> DeletePersonById(int personId)
+        {
+            return await Task.FromResult(_personRepository.DeletePersonById(personId));
+        }
+
+        public async Task<PersonDto> UpdatePerson(int personId, PersonRequest personRequest)
+        {
+            return await Task.FromResult(_personRepository.UpdatePerson(personId, personRequest));
         }
     }
 }
