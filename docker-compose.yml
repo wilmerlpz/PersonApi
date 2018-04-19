@@ -6,3 +6,10 @@ services:
     build:
       context: .
       dockerfile: PersonApi/Dockerfile
+
+  personfrontend:
+    image: personfrontend
+    build:
+      context: .
+      dockerfile: PersonFrontEnd/Dockerfile
+
