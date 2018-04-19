@@ -1,5 +1,3 @@
-using System;
-
 namespace PersonFrontEnd.Models
 {
     public class ErrorViewModel
