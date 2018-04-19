@@ -12,16 +12,21 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "PERSON_API_URL": "http://localhost:33472/api/"
       }
     },
     "PersonFrontEnd": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "PERSON_API_URL": "http://localhost:33472/api/"
       },
       "applicationUrl": "http://localhost:41051/"
     }
   }
 }
+
+
+
