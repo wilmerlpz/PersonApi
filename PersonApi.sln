@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonApi", "PersonApi\PersonApi.csproj", "{F1BE6AA8-FF03-427A-AF8C-E7F821E06072}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonApi", "PersonApi\PersonApi.csproj", "{F1BE6AA8-FF03-427A-AF8C-E7F821E06072}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{EA4A9D2C-6086-446E-9F28-77E1F61B64BF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonFrontEnd", "PersonFrontEnd\PersonFrontEnd.csproj", "{4864CCC1-5AB9-4102-8340-10A3E0F87584}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonApiClient", "PersonApiClient\PersonApiClient.csproj", "{F6A702ED-B720-4E59-892E-C6F393AF6F7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{EA4A9D2C-6086-446E-9F28-77E1F61B64BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA4A9D2C-6086-446E-9F28-77E1F61B64BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA4A9D2C-6086-446E-9F28-77E1F61B64BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4864CCC1-5AB9-4102-8340-10A3E0F87584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4864CCC1-5AB9-4102-8340-10A3E0F87584}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4864CCC1-5AB9-4102-8340-10A3E0F87584}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4864CCC1-5AB9-4102-8340-10A3E0F87584}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6A702ED-B720-4E59-892E-C6F393AF6F7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6A702ED-B720-4E59-892E-C6F393AF6F7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6A702ED-B720-4E59-892E-C6F393AF6F7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6A702ED-B720-4E59-892E-C6F393AF6F7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
